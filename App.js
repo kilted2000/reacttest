@@ -2,19 +2,12 @@
 
 
 import React from 'react';
- 
+import Welcome from './components/Welcome'; 
 
 
 const App = () => {
-  const clicky = ()=>{
-    alert("Cait a bheil thu?");
-  }
    return (
-    <>
-<h1 style={{color:"yellow"}}>Hello World</h1>
-<p>It's great to be here!</p>
-<button onClick={clicky}>Click Here</button>
-  </>
+      <Welcome />
    );
 };
 
