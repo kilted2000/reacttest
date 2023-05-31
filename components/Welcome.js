@@ -1,8 +1,10 @@
 import React from 'react';
-
+import { useState } from 'react';   
 
 const Welcome = () =>{
-const clicky = ()=>{
+    const [name, setName] = React.useState('');
+    
+    const clicky = ()=>{
     alert("Cait a bheil thu?");
   }
   return(
@@ -12,7 +14,7 @@ const clicky = ()=>{
 <p>It's great to be here!</p>
 <button className="btn btn-outline-dark" onClick={clicky}>Click Here</button>
 <form style={{marginTop:'20px'}}>
-    input: <input type="text" name="name" />
+    Name: <input type="text" name="name" placeholder='Your Name Here' />
 </form>
 </div>
 </>
