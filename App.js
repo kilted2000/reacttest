@@ -7,7 +7,7 @@ import React from 'react';
 
 const App = () => {
   const clicky = ()=>{
-    alert("Hello World");
+    alert("Cait a bheil thu?");
   }
    return (
     <>
