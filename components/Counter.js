@@ -1,18 +1,14 @@
 
-import React, { useState } from "react";; 
+import React, { useState } from "react"; 
 
-const Counter = () =>{
+const Counter = React.memo(() =>{
     const [count, setCount] = useState(0);
     
     const add = () =>{
-        setCount(count + 1);
-        
-        
+        setCount(count + 1); 
     };
     const reset = () =>{
-        setCount(0);
-      
-        
+        setCount();  
     };
     return(
         <>
@@ -26,7 +22,7 @@ const Counter = () =>{
        </div>
         </>
     );
-}
+})
 
 
 
