@@ -18,7 +18,7 @@ const Counter = React.memo(() =>{
        <form>
        <button className="btn btn-outline-dark" name="count" type="button" onClick={add}>Click To Add</button>
        <div id="count">{count}</div>
-       <input id="reset" type="button" value="Reset" onClick={reset} />
+       <input id="reset" type="button" value="Reset" className="btn btn-dark" onClick={reset} />
        </form>
        </div>
         </>
