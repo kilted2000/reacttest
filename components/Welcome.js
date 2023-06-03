@@ -30,7 +30,7 @@ const Welcome = () =>{
   }
   return(
 <>
-<div style={{ height: '500px', width:'400px',margin:'auto',backgroundColor: "#321E1E", padding:'10px'}}>
+<div style={{ height: '250px', width:'400px',margin:'auto',backgroundColor: "#321E1E", padding:'10px'}}>
 <h1 style={{color:"#CD1818"}}>Hello World</h1>
 <p>Hello</p>
 <p>It's great to be here!</p>
@@ -38,11 +38,11 @@ const Welcome = () =>{
 <form style={{marginTop:'20px'}}>
     Name: <input type="text" name="name" placeholder='Your Name Here' />
 </form>
-{ <ul style={{backgroundColor: 'white'}}>
+{/* { <ul style={{backgroundColor: 'white'}}>
         {dogs.map((dog) => (
           <li key={dog.id}>{dog.name}</li>
         ))}
-      </ul> }
+      </ul> } */}
 </div>
 </>
     );
