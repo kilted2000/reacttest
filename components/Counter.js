@@ -6,7 +6,7 @@ const Counter = React.memo(() =>{
     
     const add = (e) =>{
         e.preventDefault();
-        setCount(count + 1); 
+        setCount(count + 5); 
     };
     const reset = () =>{
         setCount(0);  
