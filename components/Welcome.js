@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const Welcome = () =>{
     const [name, setName] = React.useState('')
-    const handleChange = (event) => { event.preventDefault();
+    const handleChange = (event) => { 
       setName(event.target.value)
       
     }
@@ -22,9 +22,9 @@ const Welcome = () =>{
 <button className="btn btn-outline-light" onClick={clicky}>Click Here</button>
 <form style={{marginTop:'20px'}}>
     <label htmlFor='name'>Name: </label> 
-    <input type="text" name="name" value={name}  />
-    <button style={{marginLeft: "7px"}} value="Submit" name='name' onClick={handleChange} id='name' className="btn btn-outline-light" >Submit</button>
-    {name ? <strong>Hello {name}</strong> : 'Please type your name'}
+    <input type="text" name='name' value={name} onChange={handleChange} />
+    <button style={{marginLeft: "7px"}} value="submit" name='name' onClick={handleChange} id='names' className="btn btn-outline-light" >Submit</button>
+   <p> {name ? <strong>Hello {name}</strong> : 'Please type your name'}</p>
 </form>
 {/* { <ul style={{backgroundColor: 'white'}}>
         {dogs.map((dog) => (
