@@ -5,38 +5,26 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 
 const Welcome = () =>{
-    const [dogs, setDogs] = useState([]);
-
-    useEffect(() => {
-      const fetchDogs = async () => {
-        try {
-          const response = await axios.get('https://api.thedogapi.com/v1/images/search?api_key=live_dBaZf3vQw31302AszpfI20tCqQwf9qXg1ha5X0gpNYc1geh8XPIfak2NGLFc1tDc&breeds=breeds_id&limit=12&images/', {
-            headers: {
-              'x-api-key': 'live_dBaZf3vQw31302AszpfI20tCqQwf9qXg1ha5X0gpNYc1geh8XPIfak2NGLFc1tDc' 
-            }
-        });
-          setDogs(response.data);
-        } catch (error) {
-          console.log(error);
-        }
-      };
-  
-      fetchDogs();
-    }, []);
-    const [name, setName] = React.useState('');
-    
+    const [name, setName] = React.useState('')
+    const handleChange = (event) => { event.preventDefault();
+      setName(event.target.value)
+      
+    }
     const clicky = ()=>{
-    alert("Ciamar a tha sibh fein?");
+    alert("Ciamar a tha sibh fhein?");
   }
   return(
 <>
-<div style={{ height: '250px', width:'400px',margin:'auto',backgroundColor: "#321E1E", padding:'10px'}}>
+<div style={{ height: '300px', width:'400px',margin:'auto',backgroundColor: "#321E1E", padding:'10px'}}>
 <h1 style={{color:"#CD1818"}}>Hello World</h1>
 <p>Hello</p>
 <p>It's great to be here!</p>
 <button className="btn btn-outline-light" onClick={clicky}>Click Here</button>
 <form style={{marginTop:'20px'}}>
-    Name: <input type="text" name="name" placeholder='Your Name Here' />
+    <label htmlFor='name'>Name: </label> 
+    <input type="text" name="name" value={name}  />
+    <button style={{marginLeft: "7px"}} value="Submit" name='name' onClick={handleChange} id='name' className="btn btn-outline-light" >Submit</button>
+    {name ? <strong>Hello {name}</strong> : 'Please type your name'}
 </form>
 {/* { <ul style={{backgroundColor: 'white'}}>
         {dogs.map((dog) => (
